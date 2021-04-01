@@ -1,5 +1,10 @@
 ---
-aliases: "First_name", "Last_name", "email", "(phone"]
+aliases:
+- "First_name"
+- "Last_name"
+- "email"
+- "(phone"]
+- tags: CRM/<Company>
 ---
 ## Created:  Date
 
