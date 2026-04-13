@@ -4,8 +4,6 @@ A simple, local-first CRM system built entirely with Markdown files.
 
 No subscriptions. No lock-in. Just plain text you control.
 
----
-
 ## Who This Is For
 
 This system is designed for:
@@ -17,8 +15,6 @@ This system is designed for:
 - Anyone who prefers simple, private, text-based tools
 
 If you like tools like Obsidian, Logseq, or plain text files—you’ll feel at home here.
-
----
 
 ## Why Use Markdown for a CRM?
 
@@ -38,8 +34,6 @@ Markdown gives you:
 
 This is a CRM you can still open 10+ years from now.
 
----
-
 ## What This Is (and Isn’t)
 
 **This is:**
@@ -56,8 +50,6 @@ This is a CRM you can still open 10+ years from now.
 
 You actively maintain it—like a notebook for your business relationships.
 
----
-
 ## Features
 
 - **Customer Profiles** — One Markdown file per contact
@@ -65,8 +57,6 @@ You actively maintain it—like a notebook for your business relationships.
 - **Task Tracking** — Follow-ups and reminders
 - **Simple Organization** — Folder-based structure
 - **Customizable Templates** — Adapt to your workflow
-
----
 
 ## Folder Structure
 
@@ -109,8 +99,6 @@ Interested in redesigning landing pages.
 - [ ] Follow up on proposal
 ```
 
----
-
 ## Example Interaction
 
 ```md
@@ -129,8 +117,6 @@ Discussed website redesign needs.
 
 Send proposal by Friday.
 ```
-
----
 
 ## Getting Started
 
@@ -161,8 +147,6 @@ Create a new note for each call, email, or meeting.
 
 Use tasks or dates to stay on top of relationships.
 
----
-
 ## Suggested Workflow
 
 1. Add a new contact
@@ -172,8 +156,6 @@ Use tasks or dates to stay on top of relationships.
 5. Archive inactive contacts periodically
 
 Consistency matters more than complexity.
-
----
 
 ## Customization
 
@@ -188,8 +170,6 @@ You can:
 
 Make it yours.
 
----
-
 ## Roadmap
 
 Planned improvements:
@@ -199,21 +179,15 @@ Planned improvements:
 - Optional Obsidian enhancements (Dataview, Tasks)
 - CRM dashboard note
 
----
-
 ## Contributing
 
 Suggestions, improvements, and templates are welcome.
 
 Open an issue or submit a pull request.
 
----
-
 ## License
 
 This project is licensed under the GPL-2.0 License.
-
----
 
 ## Final Thought
 
