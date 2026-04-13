@@ -1,35 +1,24 @@
----
-aliases:
-- "First_name"
-- "Last_name"
-- "email"
-- "(phone"]
-- tags: CRM/<Company>
----
-## Created:  Date
+# Jane Doe
 
-# Title
+- **Company:** Acme Inc
+- **Email:** jane@acme.com
+- **Phone:** +1 555-555-5555
+- **Website:** https://acme.com
+- **Status:** Lead
+- **Lead Source:** Referral
+- **Tags:** design, warm lead
+- **Last Contact:** 2026-04-10
+- **Next Follow-Up:** 2026-04-18
 
-# Full name
+## Notes
 
----
+Interested in redesigning landing pages.
 
-## Contact Info
+## Interaction Log
 
-Full name
-Title
-Company
-Address Line
-City, ST, ZIP
+- [[2026-04-10 - Intro Call - Jane Doe]]
+- [[2026-04-12 - Sent Proposal - Jane Doe]]
 
-Email: 
-Phone: 
+## Tasks
 
-[www.website.org](http://www.website.org/)
-
----
-
-## Log
-### Date - Summary
-
-Notes
+- [ ] Follow up on proposal by 2026-04-18

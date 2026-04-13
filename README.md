@@ -1,45 +1,224 @@
-# markdown-crm
+# CRM in Markdown
 
-## Concept
+A simple, local-first CRM system built entirely with Markdown files.
 
-Markdown CRM is a basic template designed to run a customer relationship management (CRM) system using Markdown files. This template provides a simple yet effective way to organize and manage customer information, interactions, and tasks in a text-based format.
+No subscriptions. No lock-in. Just plain text you control.
 
-Using Markdown for your CRM system offers several advantages, including simplicity, portability, and ease of use. With Markdown CRM, you can easily create, edit, and access customer records using any text editor or Markdown-compatible application.
+---
+
+## Who This Is For
+
+This system is designed for:
+
+- Freelancers
+- Consultants
+- Writers and creators
+- Small business owners
+- Anyone who prefers simple, private, text-based tools
+
+If you like tools like Obsidian, Logseq, or plain text files—you’ll feel at home here.
+
+---
+
+## Why Use Markdown for a CRM?
+
+Most CRMs are:
+
+- Overbuilt
+- Expensive
+- Hard to customize
+- Locked behind SaaS platforms
+
+Markdown gives you:
+
+- **Full ownership** — your data is just files
+- **Portability** — works with any editor
+- **Simplicity** — no UI complexity
+- **Longevity** — plain text never breaks
+
+This is a CRM you can still open 10+ years from now.
+
+---
+
+## What This Is (and Isn’t)
+
+**This is:**
+
+- A lightweight CRM system
+- A structured set of templates and workflows
+- A starting point you can customize
+
+**This is not:**
+
+- A full SaaS CRM replacement
+- A dashboard-heavy analytics tool
+- A “set it and forget it” system
+
+You actively maintain it—like a notebook for your business relationships.
+
+---
 
 ## Features
 
-- **Customer Profiles**: Create Markdown files for each customer to store their contact information, notes, and interactions.
+- **Customer Profiles** — One Markdown file per contact
+- **Interaction Logs** — Track calls, emails, meetings
+- **Task Tracking** — Follow-ups and reminders
+- **Simple Organization** — Folder-based structure
+- **Customizable Templates** — Adapt to your workflow
 
-- **Task Management**: Keep track of tasks and follow-ups related to each customer, including due dates and status updates.
+---
 
-- **Interaction Logs**: Document all interactions with customers, such as calls, meetings, emails, and more, in Markdown format for easy reference.
+## Folder Structure
 
-- **Customizable Templates**: Customize the structure and content of your customer profiles and interaction logs to suit your specific needs and preferences.
+```
+crm-markdown/
+│
+├── contacts/
+├── companies/
+├── interactions/
+├── tasks/
+├── templates/
+└── archive/
+```
+
+---
+
+## Example Contact
+
+```md
+# Jane Doe
+
+- **Company:** Acme Inc
+- **Email:** jane@acme.com
+- **Phone:** +1 555-555-5555
+- **Status:** Lead
+- **Tags:** design, warm
+- **Last Contact:** 2026-04-10
+- **Next Follow-Up:** 2026-04-18
+
+## Notes
+
+Interested in redesigning landing pages.
+
+## Interactions
+
+- [[2026-04-10 - Intro Call - Jane Doe]]
+
+## Tasks
+
+- [ ] Follow up on proposal
+```
+
+---
+
+## Example Interaction
+
+```md
+# Intro Call with Jane Doe
+
+- **Date:** 2026-04-10
+- **Type:** Call
+- **Contact:** [[Jane Doe]]
+- **Company:** [[Acme Inc]]
+
+## Summary
+
+Discussed website redesign needs.
+
+## Next Step
+
+Send proposal by Friday.
+```
+
+---
 
 ## Getting Started
 
-To start using Markdown CRM, follow these steps:
+### 1. Clone the Repository
 
-1. **Clone the Repository**: Clone the markdown-crm repository to your local machine.
+```
+git clone https://github.com/CLSherrod/crm-markdown.git
+```
 
-    ```bash
-    git clone https://github.com/clsherrod/markdown-crm.git
-    ```
+### 2. Open in Your Preferred Tool
 
-2. **Explore the Files**: Take a look at the various Markdown files included in the repository to see how the CRM system is organized.
+Works great with:
 
-3. **Create Customer Profiles**: Create Markdown files for each of your customers and populate them with relevant information, such as name, contact details, and any additional notes.
+- Obsidian
+- Logseq
+- VS Code
+- Any text editor
 
-4. **Manage Tasks**: Use Markdown files or a separate task management system to keep track of tasks and follow-ups for each customer.
+### 3. Create Your First Contact
 
-5. **Log Interactions**: Document all interactions with customers in Markdown files, including the date, type of interaction, and any relevant details or notes.
+Duplicate the template and start adding real data.
 
-6. **Customize as Needed**: Customize the CRM system to meet your specific requirements by adding new fields, modifying templates, or integrating with other tools and systems.
+### 4. Log Interactions
 
-## Updates
+Create a new note for each call, email, or meeting.
 
-Markdown CRM is open to update ideas and contributions from the community. If you have suggestions for new features, improvements, or additional templates, please feel free to submit a pull request or open an issue on the GitHub repository.
+### 5. Track Follow-Ups
+
+Use tasks or dates to stay on top of relationships.
+
+---
+
+## Suggested Workflow
+
+1. Add a new contact
+2. Log every interaction
+3. Set a next follow-up date
+4. Review tasks daily
+5. Archive inactive contacts periodically
+
+Consistency matters more than complexity.
+
+---
+
+## Customization
+
+This system is intentionally simple.
+
+You can:
+
+- Add new fields
+- Change naming conventions
+- Integrate with your note-taking system
+- Add automation using tools like scripts or plugins
+
+Make it yours.
+
+---
+
+## Roadmap
+
+Planned improvements:
+
+- More templates (company, deals, pipelines)
+- Example dataset
+- Optional Obsidian enhancements (Dataview, Tasks)
+- CRM dashboard note
+
+---
+
+## Contributing
+
+Suggestions, improvements, and templates are welcome.
+
+Open an issue or submit a pull request.
+
+---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it for your own purposes.
+This project is licensed under the GPL-2.0 License.
+
+---
+
+## Final Thought
+
+A CRM doesn’t need to be complicated to be effective.
+
+If you consistently track relationships, follow up, and stay organized—you’ll outperform most people using expensive tools.
+
+This is a system for people who value simplicity and control.
