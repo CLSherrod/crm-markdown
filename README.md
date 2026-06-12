@@ -1,189 +1,294 @@
 # CRM in Markdown
 
-A simple, local-first CRM system built entirely with Markdown files.
+A simple, local-first networking and lightweight CRM system built entirely with Markdown files.
 
-No subscriptions. No lock-in. Just plain text you control.
+No subscriptions. No lock-in. No bloated sales pipeline. Just plain text you control.
 
-## Who This Is For
+This project is designed for people who want to remember people, follow up with care, and keep a useful communication history without handing their relationship data to another SaaS platform.
 
-This system is designed for:
+## What This Is
 
-- Freelancers
-- Consultants
-- Writers and creators
-- Small business owners
-- Anyone who prefers simple, private, text-based tools
+**CRM in Markdown** is a Markdown-first, Obsidian-enhanced networking system.
 
-If you like tools like Obsidian, Logseq, or plain text files—you’ll feel at home here.
+It helps you track:
 
-## Why Use Markdown for a CRM?
+- Friends
+- Collaborators
+- Clients
+- Leads
+- Mentors
+- Community relationships
 
-Most CRMs are:
+The system is intentionally simple: **one person = one contact note**. Each contact note includes the person’s profile, follow-up rhythm, next contact date, and communication log.
 
-- Overbuilt
-- Expensive
-- Hard to customize
-- Locked behind SaaS platforms
+## What This Is Not
 
-Markdown gives you:
+This is not a heavy sales CRM.
 
-- **Full ownership** — your data is just files
-- **Portability** — works with any editor
-- **Simplicity** — no UI complexity
-- **Longevity** — plain text never breaks
+It does not try to replace Salesforce, HubSpot, or a full business automation platform. It is a calm, human-scale system for staying in touch with people who matter.
 
-This is a CRM you can still open 10+ years from now.
+## Core Philosophy
 
-## What This Is (and Isn’t)
+Most networking systems fail because they become another job.
 
-**This is:**
+This system is built around a 30-second habit:
 
-- A lightweight CRM system
-- A structured set of templates and workflows
-- A starting point you can customize
-
-**This is not:**
-
-- A full SaaS CRM replacement
-- A dashboard-heavy analytics tool
-- A “set it and forget it” system
-
-You actively maintain it—like a notebook for your business relationships.
-
-## Features
-
-- **Customer Profiles** — One Markdown file per contact
-- **Interaction Logs** — Track calls, emails, meetings
-- **Task Tracking** — Follow-ups and reminders
-- **Simple Organization** — Folder-based structure
-- **Customizable Templates** — Adapt to your workflow
-
-## Folder Structure
-
-```
-crm-markdown/
-│
-├── contacts/
-├── companies/
-├── interactions/
-├── tasks/
-├── templates/
-└── archive/
-```
-
----
-
-## Example Contact
-
-```md
-# Jane Doe
-
-- **Company:** Acme Inc
-- **Email:** jane@acme.com
-- **Phone:** +1 555-555-5555
-- **Status:** Lead
-- **Tags:** design, warm
-- **Last Contact:** 2026-04-10
-- **Next Follow-Up:** 2026-04-18
-
-## Notes
-
-Interested in redesigning landing pages.
-
-## Interactions
-
-- [[2026-04-10 - Intro Call - Jane Doe]]
-
-## Tasks
-
-- [ ] Follow up on proposal
-```
-
-## Example Interaction
-
-```md
-# Intro Call with Jane Doe
-
-- **Date:** 2026-04-10
-- **Type:** Call
-- **Contact:** [[Jane Doe]]
-- **Company:** [[Acme Inc]]
-
-## Summary
-
-Discussed website redesign needs.
-
-## Next Step
-
-Send proposal by Friday.
-```
-
-## Getting Started
-
-### 1. Clone the Repository
-
-```
-git clone https://github.com/CLSherrod/crm-markdown.git
-```
-
-### 2. Open in Your Preferred Tool
-
-Works great with:
-
-- Obsidian
-- Logseq
-- VS Code
-- Any text editor
-
-### 3. Create Your First Contact
-
-Duplicate the template and start adding real data.
-
-### 4. Log Interactions
-
-Create a new note for each call, email, or meeting.
-
-### 5. Track Follow-Ups
-
-Use tasks or dates to stay on top of relationships.
-
-## Suggested Workflow
-
-1. Add a new contact
-2. Log every interaction
-3. Set a next follow-up date
-4. Review tasks daily
-5. Archive inactive contacts periodically
+1. Open the person’s contact note.
+2. Add a short communication log entry.
+3. Update `last_contacted`.
+4. Update `next_contact_due`.
+5. Move on.
 
 Consistency matters more than complexity.
 
+## Features
+
+- **One Markdown file per person**
+- **One communication log per person**
+- **Monthly, quarterly, yearly, and custom follow-up cadences**
+- **Manual next-contact dates for real flexibility**
+- **Obsidian Bases dashboards for reminders**
+- **Contact Today, Overdue, and This Week views**
+- **Relationship tiers so not everyone gets the same attention**
+- **Personal and business fields**
+- **Templates for contacts, companies, logs, and monthly reviews**
+- **Example data you can delete or adapt**
+
+## Why Markdown?
+
+Markdown gives you:
+
+- **Ownership** — your relationship data is just files
+- **Portability** — works with Obsidian, Logseq, VS Code, or any text editor
+- **Longevity** — plain text will still open years from now
+- **Control** — no forced workflow, no subscription, no lock-in
+- **Simplicity** — the system is only as complicated as you make it
+
+## Why Obsidian Bases?
+
+Obsidian Bases adds database-like views on top of your Markdown notes and note properties.
+
+This repo includes `.base` files for:
+
+- Follow-up reminders
+- Contact lists
+- Relationship views
+
+You can still use the system without Obsidian Bases, but Bases makes the dashboard much easier.
+
+## File Structure
+
+This repo uses a flatter structure on purpose.
+
+```text
+crm-markdown/
+├── README.md
+├── Networking Dashboard.md
+├── Follow-Up Dashboard.base
+├── Contacts.base
+├── templates/
+│   ├── Contact Template.md
+│   ├── Communication Log Entry Template.md
+│   ├── Company Template.md
+│   └── Monthly Review Template.md
+├── samples/
+│   ├── Jane Doe - Acme Inc.md
+│   ├── Marcus Lee - Collaborator.md
+│   ├── Ana Rivera - Community.md
+│   ├── Evelyn Park - Mentor.md
+│   ├── Sam Patel - Lead.md
+│   └── Lena Brooks - Friend.md
+└── archive/
+```
+
+## Contact Note Model
+
+Each person gets one contact note.
+
+A contact note includes:
+
+- Contact details
+- Relationship type
+- Relationship tier
+- Follow-up cadence
+- Last contacted date
+- Next contact due date
+- Reason to contact
+- Last meaningful topic
+- Optional personal fields
+- Optional business fields
+- Communication log
+- Open tasks
+
+## Relationship Types
+
+Use these for `relationship_type`:
+
+- `friend`
+- `collaborator`
+- `client`
+- `lead`
+- `mentor`
+- `community`
+
+You can add your own, but keep the list small. Too many categories make the system annoying to maintain.
+
+## Relationship Tiers
+
+Use these for `relationship_tier`:
+
+- `core` — people who matter most
+- `active` — current clients, collaborators, close peers
+- `warm` — good relationships worth maintaining
+- `loose` — occasional contact only
+- `archive` — inactive or no longer relevant
+
+This is important. Not every contact deserves the same reminder rhythm.
+
+## Contact Cadence
+
+Use these for `contact_cadence`:
+
+- `monthly`
+- `quarterly`
+- `twice-yearly`
+- `yearly`
+- `custom`
+- `none`
+
+The cadence is the rhythm. The real reminder is `next_contact_due`.
+
+This gives you both structure and flexibility.
+
+## Reminder Dashboard
+
+Open `Networking Dashboard.md` in Obsidian.
+
+It embeds the main views from `Follow-Up Dashboard.base`:
+
+- **Contact Today** — people due today
+- **Overdue** — people you should have already contacted
+- **This Week** — people coming up soon
+
+## Communication Log
+
+Each person has one communication log inside their contact note.
+
+Log meaningful contact, including:
+
+- Email
+- Text / WhatsApp
+- Phone call
+- Zoom call
+- In-person meeting
+- Commented on their post
+- Sent article/resource
+- Sent gift/card
+- Introduced them to someone
+- They contacted you
+
+Do not over-log tiny social media interactions unless they matter. The point is memory and follow-through, not surveillance.
+
+## 30-Second Logging Workflow
+
+After you contact someone, add a short entry like this:
+
+```md
+### 2026-06-12 — Email
+
+- **Direction:** Outbound
+- **Summary:** Sent a useful article about analog planning.
+- **Next step:** Ask how their launch went.
+- **Next contact due:** 2026-07-12
+```
+
+Then update the properties at the top of the note:
+
+```yaml
+last_contacted: 2026-06-12
+next_contact_due: 2026-07-12
+contact_reason: Ask how their launch went.
+last_meaningful_topic: They were preparing a new course launch.
+```
+
+That is the whole system.
+
+## Suggested Workflow
+
+### Daily
+
+Open `Networking Dashboard.md` and check:
+
+1. Contact Today
+2. Overdue
+3. This Week
+
+Contact only the people who actually make sense today.
+
+### After Contacting Someone
+
+1. Open the contact note.
+2. Add one communication log entry.
+3. Update `last_contacted`.
+4. Update `next_contact_due`.
+5. Update `contact_reason` if there is a clear next reason.
+
+### Monthly
+
+Use `templates/Monthly Review Template.md` to review:
+
+- Who you contacted
+- Who you neglected
+- Which relationships matter now
+- Who should be archived
+- Who deserves more attention next month
+
+## How to Start
+
+1. Open this folder as an Obsidian vault.
+2. Turn on the **Bases** core plugin in Obsidian.
+3. Open `Networking Dashboard.md`.
+4. Review the sample contacts.
+5. Duplicate `templates/Contact Template.md` for your first real contact.
+6. Delete the sample contacts when you no longer need them.
+
+## Using Without Obsidian
+
+You can still use this system in any Markdown editor.
+
+Without Obsidian Bases, use search for:
+
+```text
+next_contact_due: 2026-06
+relationship_tier: core
+relationship_type: mentor
+```
+
+The data is still plain Markdown.
+
+## Recommended Rules
+
+- Keep one note per person.
+- Keep the communication log inside that person’s note.
+- Update the next due date manually.
+- Use cadence as guidance, not law.
+- Archive people without guilt.
+- Do not turn this into a second inbox.
+- Do not over-track people.
+- Keep it human.
+
 ## Customization
 
-This system is intentionally simple.
+You can add:
 
-You can:
+- More relationship types
+- More sample people
+- More `.base` views
+- Scripts for automatic due-date updates
+- Dataview queries if you prefer Dataview
+- Sync using Git, iCloud, Dropbox, Syncthing, or Obsidian Sync
 
-- Add new fields
-- Change naming conventions
-- Integrate with your note-taking system
-- Add automation using tools like scripts or plugins
-
-Make it yours.
-
-## Roadmap
-
-Planned improvements:
-
-- More templates (company, deals, pipelines)
-- Example dataset
-- Optional Obsidian enhancements (Dataview, Tasks)
-- CRM dashboard note
-
-## Contributing
-
-Suggestions, improvements, and templates are welcome.
-
-Open an issue or submit a pull request.
+But start simple first.
 
 ## License
 
@@ -191,8 +296,6 @@ This project is licensed under the GPL-2.0 License.
 
 ## Final Thought
 
-A CRM doesn’t need to be complicated to be effective.
+A good networking system should help you be more thoughtful, not more mechanical.
 
-If you consistently track relationships, follow up, and stay organized—you’ll outperform most people using expensive tools.
-
-This is a system for people who value simplicity and control.
+Use this to remember people, follow up when it matters, and build stronger relationships without turning your life into a sales dashboard.
