@@ -1,6 +1,18 @@
 # QuickAdd Setup
 
-This guide sets up QuickAdd so you can add a communication log entry to a contact note in about 30 seconds.
+This guide sets up the three core QuickAdd actions for this vault:
+
+1. `People: Log Communication`
+2. `People: Monthly Review`
+3. `People: New Contact`
+
+Start with the first two. Add New Contact after you are comfortable with the system.
+
+---
+
+# People: Log Communication
+
+Use this so you can add a communication log entry to a contact note in about 30 seconds.
 
 ## Goal
 
@@ -101,3 +113,74 @@ Sample contacts belong in:
 ```text
 samples/
 ```
+
+---
+
+# People: Monthly Review
+
+Use this once a month to create a fresh relationship review note from the monthly review template.
+
+## Create the QuickAdd Choice
+
+1. Open **Settings** in Obsidian.
+2. Go to **Community plugins → QuickAdd → Manage Macros / Choices**.
+3. Add a new choice.
+4. Name it:
+
+```text
+People: Monthly Review
+```
+
+5. Set the choice type to:
+
+```text
+Template
+```
+
+## Template Settings
+
+Use these settings:
+
+```text
+Template Path: templates/Monthly Review Template.md
+File Name Format: reviews/{{DATE:YYYY-MM}} Monthly Relationship Review
+Create in folder: reviews
+Append link: Disabled
+Open: On
+If file already exists: Keep existing file
+```
+
+If QuickAdd does not like the folder inside the file name, use this instead:
+
+```text
+File Name Format: {{DATE:YYYY-MM}} Monthly Relationship Review
+Create in folder: reviews
+```
+
+## Result
+
+Running the command creates a note like:
+
+```text
+reviews/2026-06 Monthly Relationship Review.md
+```
+
+## Recommended Command Palette Use
+
+Run it from the command palette:
+
+```text
+QuickAdd: People: Monthly Review
+```
+
+Suggested hotkey:
+
+```text
+Cmd + Shift + M
+```
+
+## Monthly Rule
+
+Create only one monthly review per month.
+
+This is a relationship reset, not a productivity report. Keep it short and useful.
