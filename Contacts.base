@@ -1,0 +1,75 @@
+filters:
+  and:
+    - type == "contact"
+
+properties:
+  file.name:
+    displayName: Contact
+  relationship_type:
+    displayName: Type
+  relationship_tier:
+    displayName: Tier
+  status:
+    displayName: Status
+  contact_cadence:
+    displayName: Cadence
+  preferred_contact_method:
+    displayName: Method
+  location:
+    displayName: Location
+  last_contacted:
+    displayName: Last Contacted
+  next_contact_due:
+    displayName: Next Due
+
+views:
+  - type: table
+    name: All Active Contacts
+    filters:
+      and:
+        - status != "archive"
+    order:
+      - file.name
+      - relationship_type
+      - relationship_tier
+      - status
+      - contact_cadence
+      - preferred_contact_method
+      - location
+      - last_contacted
+      - next_contact_due
+    sort:
+      - property: relationship_tier
+        direction: ASC
+      - property: file.name
+        direction: ASC
+
+  - type: table
+    name: Core and Active
+    filters:
+      or:
+        - relationship_tier == "core"
+        - relationship_tier == "active"
+    order:
+      - file.name
+      - relationship_type
+      - relationship_tier
+      - preferred_contact_method
+      - contact_reason
+      - last_meaningful_topic
+      - next_contact_due
+    sort:
+      - property: next_contact_due
+        direction: ASC
+
+  - type: table
+    name: Archived
+    filters:
+      and:
+        - status == "archive"
+    order:
+      - file.name
+      - relationship_type
+      - relationship_tier
+      - last_contacted
+      - archive_reason
