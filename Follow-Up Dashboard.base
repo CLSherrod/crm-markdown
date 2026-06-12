@@ -1,0 +1,81 @@
+filters:
+  and:
+    - type == "contact"
+    - status != "archive"
+
+formulas:
+  due_status: |
+    if(next_contact_due < date(today), "Overdue", if(next_contact_due == date(today), "Today", if(next_contact_due <= date(today) + dur(7 days), "This Week", "Later")))
+
+properties:
+  file.name:
+    displayName: Contact
+  relationship_type:
+    displayName: Type
+  relationship_tier:
+    displayName: Tier
+  preferred_contact_method:
+    displayName: Method
+  contact_reason:
+    displayName: Reason
+  last_contacted:
+    displayName: Last Contacted
+  next_contact_due:
+    displayName: Next Due
+  due_status:
+    displayName: Due Status
+
+views:
+  - type: table
+    name: Contact Today
+    filters:
+      and:
+        - next_contact_due == date(today)
+    order:
+      - file.name
+      - relationship_type
+      - relationship_tier
+      - preferred_contact_method
+      - contact_reason
+      - last_contacted
+      - next_contact_due
+    sort:
+      - property: relationship_tier
+        direction: ASC
+      - property: file.name
+        direction: ASC
+
+  - type: table
+    name: Overdue
+    filters:
+      and:
+        - next_contact_due < date(today)
+    order:
+      - file.name
+      - relationship_type
+      - relationship_tier
+      - preferred_contact_method
+      - contact_reason
+      - last_contacted
+      - next_contact_due
+    sort:
+      - property: next_contact_due
+        direction: ASC
+
+  - type: table
+    name: This Week
+    filters:
+      and:
+        - next_contact_due > date(today)
+        - next_contact_due <= date(today) + dur(7 days)
+    order:
+      - file.name
+      - relationship_type
+      - relationship_tier
+      - preferred_contact_method
+      - contact_reason
+      - last_contacted
+      - next_contact_due
+    sort:
+      - property: next_contact_due
+        direction: ASC
