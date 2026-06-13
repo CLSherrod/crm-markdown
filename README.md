@@ -4,13 +4,13 @@ A simple, local-first networking and lightweight CRM system built entirely with 
 
 No subscriptions. No lock-in. No bloated sales pipeline. Just plain text you control.
 
-This project is designed for people who want to remember people, follow up with care, and keep a useful communication history without handing their relationship data to another SaaS platform.
+This project is designed for people who want to remember people, follow up with care, share useful knowledge, make thoughtful introductions, and keep a useful communication history without handing their relationship data to another SaaS platform.
 
 ## What This Is
 
 **CRM in Markdown** is a Markdown-first, Obsidian-enhanced networking system.
 
-It helps you track:
+It helps you track and nurture relationships with:
 
 - Friends
 - Collaborators
@@ -19,13 +19,17 @@ It helps you track:
 - Mentors
 - Community relationships
 
-The system is intentionally simple: **one person = one contact note**. Each contact note includes the person’s profile, follow-up rhythm, next contact date, and communication log.
+The system is intentionally simple: **one person = one contact note**.
+
+Each contact note includes the person’s profile, relationship type, relationship tier, follow-up rhythm, next contact date, and communication log.
 
 ## What This Is Not
 
 This is not a heavy sales CRM.
 
 It does not try to replace Salesforce, HubSpot, or a full business automation platform. It is a calm, human-scale system for staying in touch with people who matter.
+
+This is also not a cold outreach machine. The goal is not to squeeze value from relationships. The goal is to remember people, help where you can, and stay connected in a thoughtful way.
 
 ## Core Philosophy
 
@@ -41,6 +45,8 @@ This system is built around a 30-second habit:
 
 Consistency matters more than complexity.
 
+The best networking is generous: share useful resources, make good introductions, say thank you, and follow up when it actually matters.
+
 ## Features
 
 - **One Markdown file per person**
@@ -51,7 +57,9 @@ Consistency matters more than complexity.
 - **Contact Today, Overdue, and This Week views**
 - **Relationship tiers so not everyone gets the same attention**
 - **Personal and business fields**
-- **Templates for contacts, companies, logs, and monthly reviews**
+- **QuickAdd setup guide for fast contact creation, communication logging, and monthly reviews**
+- **Reusable value-first networking message templates**
+- **Templates for contacts, companies, communication logs, and monthly reviews**
 - **Example data you can delete or adapt**
 
 ## Why Markdown?
@@ -76,16 +84,45 @@ This repo includes `.base` files for:
 
 You can still use the system without Obsidian Bases, but Bases makes the dashboard much easier.
 
+## Recommended Vault Setup
+
+Run this as its own Obsidian vault.
+
+Recommended vault name:
+
+```text
+People
+```
+
+Use the GitHub repo folder itself as the vault folder.
+
+This keeps your networking system separate from your writing, personal notes, and project vaults.
+
 ## File Structure
 
-This repo uses a flatter structure on purpose.
+This repo uses a flatter structure on purpose, but real contacts, reviews, samples, and reusable message templates are separated.
 
 ```text
 crm-markdown/
 ├── README.md
+├── QuickAdd Setup.md
 ├── Networking Dashboard.md
 ├── Follow-Up Dashboard.base
 ├── Contacts.base
+├── contacts/
+│   └── README.md
+├── reviews/
+│   └── README.md
+├── message-templates/
+│   ├── README.md
+│   ├── Warm Check-In.md
+│   ├── Follow-Up After No Reply.md
+│   ├── Meeting Follow-Up.md
+│   ├── Send Resource.md
+│   ├── Ask for Introduction.md
+│   ├── Make an Introduction.md
+│   ├── Thank You.md
+│   └── Reconnection.md
 ├── templates/
 │   ├── Contact Template.md
 │   ├── Communication Log Entry Template.md
@@ -99,6 +136,102 @@ crm-markdown/
 │   ├── Sam Patel - Lead.md
 │   └── Lena Brooks - Friend.md
 └── archive/
+    └── README.md
+```
+
+## Where Things Go
+
+### Real Contacts
+
+Put real people in:
+
+```text
+contacts/
+```
+
+Recommended filename format:
+
+```text
+First Last.md
+```
+
+Examples:
+
+```text
+contacts/Jane Doe.md
+contacts/Sam Patel.md
+contacts/Evelyn Park.md
+```
+
+Do not put real contacts in `samples/`.
+
+### Monthly Reviews
+
+Put monthly relationship reviews in:
+
+```text
+reviews/
+```
+
+Recommended filename format:
+
+```text
+YYYY-MM Monthly Relationship Review.md
+```
+
+Example:
+
+```text
+reviews/2026-06 Monthly Relationship Review.md
+```
+
+### Message Templates
+
+Put reusable networking messages in:
+
+```text
+message-templates/
+```
+
+These are message templates you might send by email, text, WhatsApp, or DM.
+
+Keep them separate from `templates/`, which is for Obsidian note templates.
+
+### Obsidian Note Templates
+
+Put system templates in:
+
+```text
+templates/
+```
+
+This folder is for:
+
+- Contact note templates
+- Company note templates
+- Communication log entry templates
+- Monthly review templates
+
+### Samples
+
+The `samples/` folder contains fake contacts so you can see how the system works.
+
+Delete or ignore them when you are ready to use the vault for real.
+
+### Archive
+
+Move inactive contacts to:
+
+```text
+archive/
+```
+
+Before archiving a contact, update:
+
+```yaml
+status: "archive"
+relationship_tier: "archive"
+archive_reason: ""
 ```
 
 ## Contact Note Model
@@ -164,7 +297,7 @@ This gives you both structure and flexibility.
 
 Open `Networking Dashboard.md` in Obsidian.
 
-It embeds the main views from `Follow-Up Dashboard.base`:
+It uses the main views from `Follow-Up Dashboard.base`:
 
 - **Contact Today** — people due today
 - **Overdue** — people you should have already contacted
@@ -213,6 +346,63 @@ last_meaningful_topic: They were preparing a new course launch.
 
 That is the whole system.
 
+## QuickAdd Setup
+
+See:
+
+```text
+QuickAdd Setup.md
+```
+
+Recommended QuickAdd actions:
+
+```text
+People: New Contact
+People: Log Communication
+People: Monthly Review
+```
+
+Recommended Mac hotkeys:
+
+```text
+Cmd + Option + C  → People: New Contact
+Cmd + Shift + L   → People: Log Communication
+Cmd + Shift + M   → People: Monthly Review
+```
+
+Recommended Windows/Linux hotkeys:
+
+```text
+Ctrl + Alt + C    → People: New Contact
+Ctrl + Shift + L  → People: Log Communication
+Ctrl + Shift + M  → People: Monthly Review
+```
+
+## Message Templates
+
+The `message-templates/` folder includes starter templates for value-first networking:
+
+- `Warm Check-In.md`
+- `Follow-Up After No Reply.md`
+- `Meeting Follow-Up.md`
+- `Send Resource.md`
+- `Ask for Introduction.md`
+- `Make an Introduction.md`
+- `Thank You.md`
+- `Reconnection.md`
+
+Use these as starting points, not scripts.
+
+Before sending, personalize at least one real detail from the contact note.
+
+The best networking messages should communicate:
+
+- I remembered you.
+- I listened.
+- I thought this might help.
+- I am not trying to pressure you.
+- I value the relationship.
+
 ## Suggested Workflow
 
 ### Daily
@@ -235,22 +425,55 @@ Contact only the people who actually make sense today.
 
 ### Monthly
 
-Use `templates/Monthly Review Template.md` to review:
+Use `templates/Monthly Review Template.md` or QuickAdd’s `People: Monthly Review` action to review:
 
 - Who you contacted
 - Who you neglected
 - Which relationships matter now
 - Who should be archived
 - Who deserves more attention next month
+- What resources, introductions, or thank-you notes you should send
 
 ## How to Start
 
-1. Open this folder as an Obsidian vault.
-2. Turn on the **Bases** core plugin in Obsidian.
-3. Open `Networking Dashboard.md`.
-4. Review the sample contacts.
-5. Duplicate `templates/Contact Template.md` for your first real contact.
-6. Delete the sample contacts when you no longer need them.
+1. Clone or download this repo.
+2. Open this folder as its own Obsidian vault.
+3. Name the vault `People` if you want a simple, human name.
+4. Turn on the **Bases** core plugin in Obsidian.
+5. Install QuickAdd if you want fast capture workflows.
+6. Open `Networking Dashboard.md`.
+7. Review the sample contacts.
+8. Duplicate `templates/Contact Template.md` or use QuickAdd to create your first real contact.
+9. Put real contacts in `contacts/`.
+10. Delete the sample contacts when you no longer need them.
+
+## Recommended Obsidian Setup
+
+Recommended theme:
+
+```text
+Minimal
+```
+
+Recommended core plugins:
+
+- Bases
+- Templates
+- Backlinks
+- Page Preview
+- File Recovery
+
+Recommended community plugins:
+
+- Minimal Theme Settings
+- QuickAdd
+- Obsidian Git, if you want GitHub sync/versioning
+
+Optional later:
+
+- Tasks, only if contact-note tasks become hard to manage
+
+Avoid adding too many plugins at first. This vault should stay fast and calm.
 
 ## Using Without Obsidian
 
@@ -269,9 +492,15 @@ The data is still plain Markdown.
 ## Recommended Rules
 
 - Keep one note per person.
+- Put real contacts in `contacts/`.
 - Keep the communication log inside that person’s note.
 - Update the next due date manually.
 - Use cadence as guidance, not law.
+- Use message templates as starting points, not scripts.
+- Personalize every message before sending.
+- Share resources when they are truly useful.
+- Make introductions with care.
+- Say thank you specifically.
 - Archive people without guilt.
 - Do not turn this into a second inbox.
 - Do not over-track people.
@@ -283,6 +512,7 @@ You can add:
 
 - More relationship types
 - More sample people
+- More message templates
 - More `.base` views
 - Scripts for automatic due-date updates
 - Dataview queries if you prefer Dataview
@@ -298,4 +528,4 @@ This project is licensed under the GPL-2.0 License.
 
 A good networking system should help you be more thoughtful, not more mechanical.
 
-Use this to remember people, follow up when it matters, and build stronger relationships without turning your life into a sales dashboard.
+Use this to remember people, follow up when it matters, share what is useful, make meaningful introductions, and build stronger relationships without turning your life into a sales dashboard.
