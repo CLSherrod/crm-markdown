@@ -4,6 +4,8 @@
 
 Use this after someone helps you, gives advice, makes an introduction, buys something, sends encouragement, or spends meaningful time with you.
 
+A strong thank-you does more than acknowledge help. It tells the person why their effort mattered.
+
 ## Subject Lines
 
 - Thank you
@@ -15,18 +17,18 @@ Use this after someone helps you, gives advice, makes an introduction, buys some
 
 Hi {{name}},
 
-I just wanted to say thank you for {{specific_thing}}.
+I wanted to say a real thank you for {{specific_thing}}.
 
 I especially appreciated {{specific_detail}}.
 
-It helped me {{how_it_helped}}.
+It helped me {{how_it_helped}}, and I do not take that lightly.
 
 Thanks again,
 Chris
 
 ## Short Text / WhatsApp Version
 
-Hi {{name}}, thank you again for {{specific_thing}}. I really appreciated {{specific_detail}}.
+Hi {{name}}, thank you again for {{specific_thing}}. I really appreciated {{specific_detail}} — it helped me {{how_it_helped}}.
 
 ## Warmer Version
 
@@ -42,4 +44,6 @@ Chris
 
 ## Personalization Notes
 
-Be specific. “Thanks for your help” is forgettable. “Thanks for introducing me to Jane — that conversation clarified my next step” is much stronger.
+Be specific. Generic gratitude is polite. Specific gratitude builds the relationship.
+
+Name the thing they did, why it mattered, and how it helped.
