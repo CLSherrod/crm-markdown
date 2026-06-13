@@ -2,7 +2,9 @@
 
 ## Use When
 
-Use this when you have not talked to someone in a long time and want to reopen the relationship without pretending the gap did not happen.
+Use this when you have not talked to someone in a long time and want to reopen the relationship with warmth and respect.
+
+The goal is not to explain the whole gap. The goal is to reconnect around a real memory, shared context, or useful reason.
 
 ## Subject Lines
 
@@ -19,9 +21,7 @@ It has been a while, and I wanted to reach out and say hello.
 
 I was thinking about {{specific_memory_or_context}} and wondered how you have been.
 
-A lot has changed on my side since we last talked, but I’ll keep this simple: I hope you are doing well.
-
-No pressure to reply quickly. I just wanted to reconnect.
+I hope things are going well on your side. If there is anything meaningful you are working on right now, I would enjoy hearing about it.
 
 Chris
 
@@ -37,7 +37,7 @@ It has been a while, and I wanted to reconnect.
 
 I was thinking about our earlier conversation around {{specific_topic}} and wondered how things developed on your side.
 
-No agenda — just wanted to say hello and see how things are going.
+If it would be useful, I’m happy to share a few thoughts or resources based on what I’ve learned since then.
 
 Chris
 
