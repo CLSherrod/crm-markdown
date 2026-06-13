@@ -6,7 +6,7 @@ Use this when you find an article, video, book, tool, podcast, contact, or idea 
 
 ## Subject Lines
 
-- Thought this might be useful
+- Thought this might help
 - This made me think of you
 - Useful resource for {{topic}}
 - Sending this your way
@@ -19,7 +19,9 @@ I saw this and thought of our conversation about {{specific_topic}}.
 
 {{resource_link}}
 
-No need to reply. I just thought it might be useful for {{why_it_matters}}.
+The part that may be most useful is {{why_it_matters}}.
+
+I hope it helps.
 
 Chris
 
@@ -27,10 +29,22 @@ Chris
 
 Hi {{name}}, this made me think of our conversation about {{specific_topic}}: {{resource_link}}
 
-No need to reply — thought it might be useful.
+The useful part may be {{why_it_matters}}.
+
+## More Personal Version
+
+Hi {{name}},
+
+I came across this and thought it might support what you are working through with {{specific_topic}}.
+
+{{resource_link}}
+
+I’m sending it simply because it seemed useful.
+
+Chris
 
 ## Personalization Notes
 
-Only send resources that are clearly relevant. Do not use this as an excuse to create another touchpoint.
+Only send resources that clearly serve the other person.
 
-The best resource messages are short and generous.
+A useful resource message should show that you listened and remembered.
