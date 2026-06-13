@@ -2,43 +2,47 @@
 
 ## Use When
 
-Use this when you sent something and they have not replied. Keep it light. Do not guilt them.
+Use this when you sent something useful and have not heard back.
+
+The tone should be generous, light, and respectful. You are making it easy for them to respond if the timing is right.
 
 ## Subject Lines
 
 - Quick follow-up
-- Just checking back
-- Following up on this
-- No rush — quick follow-up
+- Bringing this back up
+- Still useful?
+- Quick note
 
 ## Email Template
 
 Hi {{name}},
 
-Just checking back on my note about {{topic}}.
+I wanted to gently follow up on my note about {{topic}}.
 
-No pressure if now is not the right time. I mainly wanted to make sure it did not get buried.
+If the timing is not right, no worries at all. I mainly wanted to make sure it did not get buried.
 
-If it is still useful, I’m happy to continue the conversation.
+If it is still useful, I’m glad to help.
 
 Chris
 
 ## Short Text / WhatsApp Version
 
-Hi {{name}}, just checking back on my note about {{topic}}. No pressure if now is not the right time — I just wanted to make sure it did not get buried.
+Hi {{name}}, gently following up on {{topic}}. If the timing is not right, no worries — I just wanted to make sure it did not get buried.
 
-## Softer Version
+## Value-First Version
 
 Hi {{name}},
 
-Just bringing this back to the top in case it got buried.
+I had one additional thought about {{topic}} that may be useful:
 
-No need to reply if it is not relevant right now.
+{{useful_idea}}
+
+No need to reply if this is not relevant right now. I just wanted to pass it along while it was fresh.
 
 Chris
 
 ## Personalization Notes
 
-Use this once. Maybe twice for business leads. Do not keep chasing people.
+A good follow-up either removes pressure or adds value.
 
-If they do not respond after a reasonable follow-up, update the contact note and move the next contact date farther out.
+Do not send repeated generic follow-ups. If they do not respond after a reasonable follow-up, update the contact note and move the next contact date farther out.
