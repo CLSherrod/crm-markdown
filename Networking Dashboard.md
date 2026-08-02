@@ -1,6 +1,7 @@
 # Networking Dashboard
 
-Use this page as your daily relationship check-in.
+Use this page as your daily relationship check-in. The reusable views live in
+`Follow-Up Dashboard.base`; use this page for the daily routine and monthly review.
 
 The system is simple:
 
@@ -12,78 +13,15 @@ The system is simple:
 
 ## Contact Today
 
-```base
-filters:
-  and:
-    - type == "contact"
-    - status != "archive"
-    - next_contact_due == date(today)
-views:
-  - type: table
-    name: Contact Today
-    order:
-      - file.name
-      - relationship_type
-      - relationship_tier
-      - preferred_contact_method
-      - contact_reason
-      - last_contacted
-      - next_contact_due
-    sort:
-      - property: relationship_tier
-        direction: ASC
-      - property: file.name
-        direction: ASC
-```
+Open `Follow-Up Dashboard.base` and use its **Contact Today** view.
 
 ## Overdue
 
-```base
-filters:
-  and:
-    - type == "contact"
-    - status != "archive"
-    - next_contact_due < date(today)
-views:
-  - type: table
-    name: Overdue
-    order:
-      - file.name
-      - relationship_type
-      - relationship_tier
-      - preferred_contact_method
-      - contact_reason
-      - last_contacted
-      - next_contact_due
-    sort:
-      - property: next_contact_due
-        direction: ASC
-```
+Use the **Overdue** view in `Follow-Up Dashboard.base`.
 
 ## This Week
 
-```base
-filters:
-  and:
-    - type == "contact"
-    - status != "archive"
-    - next_contact_due > date(today)
-    - next_contact_due <= date(today) + dur(7 days)
-views:
-  - type: table
-    name: This Week
-    order:
-      - file.name
-      - relationship_type
-      - relationship_tier
-      - preferred_contact_method
-      - contact_reason
-      - last_contacted
-      - next_contact_due
-    sort:
-      - property: next_contact_due
-        direction: ASC
-```
+Use the **This Week** view in `Follow-Up Dashboard.base`.
 
 ## Monthly Review
 

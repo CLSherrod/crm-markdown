@@ -2,6 +2,8 @@
 
 Put real contact notes in this folder.
 
+Only real contacts belong here. Samples are intentionally kept outside this folder so they do not appear in the contact dashboards.
+
 Recommended filename format:
 
 ```text

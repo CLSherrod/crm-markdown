@@ -1,0 +1,5 @@
+# Copy these rules into your vault's .gitignore if contact data should remain local.
+contacts/*.md
+!contacts/README.md
+reviews/*.md
+!reviews/README.md

@@ -2,6 +2,8 @@
 
 Monthly relationship reviews go in this folder.
 
+For a lighter weekly reset, use `templates/Weekly Review Template.md` and save the result here with a filename such as `2026-08-03 Weekly Relationship Review.md`.
+
 Recommended filename format:
 
 ```text

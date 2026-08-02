@@ -45,6 +45,16 @@ This system is built around a 30-second habit:
 
 Consistency matters more than complexity.
 
+## Five-Minute Quick Start
+
+1. Open this folder as an Obsidian vault.
+2. Enable the Bases core plugin and install QuickAdd if you want shortcuts.
+3. Open `samples/` and copy one example to `contacts/` to learn the format.
+4. Create a real contact in `contacts/` using `templates/Contact Template.md`.
+5. Log one interaction, update the reminder fields, and open `Follow-Up Dashboard.base`.
+
+Keep new or incomplete records at `status: "inbox"` until you have enough context to follow up thoughtfully.
+
 The best networking is generous: share useful resources, make good introductions, say thank you, and follow up when it actually matters.
 
 ## Features
@@ -59,8 +69,14 @@ The best networking is generous: share useful resources, make good introductions
 - **Personal and business fields**
 - **QuickAdd setup guide for fast contact creation, communication logging, and monthly reviews**
 - **Reusable value-first networking message templates**
+- **Optional AI workflows for drafting contacts, extracting to-dos, and requesting missing contact information**
 - **Templates for contacts, companies, communication logs, and monthly reviews**
 - **Example data you can delete or adapt**
+- **A local validation script for note properties and reminder safety**
+
+## Privacy and Backups
+
+Contact notes can contain sensitive personal information. Keep this vault private, use encrypted device and backup storage, and avoid recording secrets, financial account details, health information, or details another person would not expect you to retain. Before syncing or publishing the repository, confirm that `contacts/` contains only data you intend to share.
 
 ## Why Markdown?
 
@@ -84,6 +100,16 @@ This repo includes `.base` files for:
 
 You can still use the system without Obsidian Bases, but Bases makes the dashboard much easier.
 
+## Validation
+
+Run the read-only validator before relying on a dashboard:
+
+```text
+python3 scripts/validate_contacts.py
+```
+
+It checks real contact notes for required properties, valid dates, archive reasons, and unsafe follow-up reminders. It does not edit your files.
+
 ## Recommended Vault Setup
 
 Run this as its own Obsidian vault.
@@ -106,6 +132,13 @@ This repo uses a flatter structure on purpose, but real contacts, reviews, sampl
 crm-markdown/
 ├── README.md
 ├── QuickAdd Setup.md
+├── Field Definitions.md
+├── AI Workflows.md
+├── QuickAdd AI Review.md
+├── AI Contact Demo.md
+├── Company Notes.md
+├── Import and Export.md
+├── CHANGELOG.md
 ├── Networking Dashboard.md
 ├── Follow-Up Dashboard.base
 ├── Contacts.base
@@ -127,7 +160,14 @@ crm-markdown/
 │   ├── Contact Template.md
 │   ├── Communication Log Entry Template.md
 │   ├── Company Template.md
+│   ├── Weekly Review Template.md
 │   └── Monthly Review Template.md
+├── scripts/
+│   ├── validate_contacts.py
+│   └── test_validate_contacts.py
+├── VERSION
+├── examples/
+│   └── AI Transcript to Contact.md
 ├── samples/
 │   ├── Jane Doe - Acme Inc.md
 │   ├── Marcus Lee - Collaborator.md
@@ -211,6 +251,8 @@ This folder is for:
 - Company note templates
 - Communication log entry templates
 - Monthly review templates
+
+The `samples/` folder is outside the real-contact dashboard scope. Real contacts belong only in `contacts/`.
 
 ### Samples
 

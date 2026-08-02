@@ -1,7 +1,9 @@
 filters:
   and:
     - type == "contact"
-    - status != "archive"
+    - file.inFolder("contacts")
+    - status == "active"
+    - do_not_contact != true
 
 formulas:
   due_status: |

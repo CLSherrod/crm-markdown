@@ -16,7 +16,9 @@ primary_contact: ""
 
 ## People
 
-- [[Name]]
+- [[contacts/Name]] — Role
+
+Keep person-specific details in the linked contact note.
 
 ## Notes
 
@@ -25,4 +27,3 @@ primary_contact: ""
 
 
 ## History
-

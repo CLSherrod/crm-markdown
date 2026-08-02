@@ -105,6 +105,10 @@ Real contact notes belong in:
 contacts/
 ```
 
+## Optional AI Workflow
+
+For drafting a contact from meeting notes, extracting open tasks, or asking someone for missing contact information, see `AI Workflows.md`. AI should produce a reviewable draft; you should decide what gets saved and which reminder date is appropriate.
+
 Use simple filenames:
 
 ```text
@@ -178,7 +182,7 @@ Paste this into the Capture Format field:
 
 ## After Logging
 
-After the entry is inserted, manually update the contact properties at the top of the note:
+After the entry is inserted, update the contact properties at the top of the note. These remain intentionally manual so the reminder reflects your judgment:
 
 ```yaml
 last_contacted: {{DATE:YYYY-MM-DD}}
@@ -187,7 +191,7 @@ contact_reason: ""
 last_meaningful_topic: ""
 ```
 
-Do not automate this yet. Manual updating keeps the system easier to understand and debug.
+The log records what happened; the properties control what appears on the dashboard.
 
 ## Recommended Command Palette Use
 

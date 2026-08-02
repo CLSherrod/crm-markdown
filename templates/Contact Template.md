@@ -11,7 +11,8 @@ timezone: ""
 social_links: []
 relationship_type: ""
 relationship_tier: "warm"
-status: "active"
+status: "inbox"
+profile_complete: false
 lead_source: ""
 crm_tags: []
 first_met: ""
@@ -75,7 +76,6 @@ Use this format after each meaningful interaction.
 
 ## Open Tasks
 
-- [ ] 
+- [ ]
 
 ## Notes
-

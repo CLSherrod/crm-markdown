@@ -1,6 +1,7 @@
 filters:
   and:
     - type == "contact"
+    - file.inFolder("contacts")
 
 properties:
   file.name:
@@ -27,7 +28,9 @@ views:
     name: All Active Contacts
     filters:
       and:
-        - status != "archive"
+        - file.inFolder("contacts")
+        - status == "active"
+        - do_not_contact != true
     order:
       - file.name
       - relationship_type
@@ -47,9 +50,13 @@ views:
   - type: table
     name: Core and Active
     filters:
-      or:
-        - relationship_tier == "core"
-        - relationship_tier == "active"
+      and:
+        - file.inFolder("contacts")
+        - status == "active"
+        - do_not_contact != true
+        - or:
+            - relationship_tier == "core"
+            - relationship_tier == "active"
     order:
       - file.name
       - relationship_type
@@ -63,9 +70,85 @@ views:
         direction: ASC
 
   - type: table
+    name: By Company
+    filters:
+      and:
+        - file.inFolder("contacts")
+        - status == "active"
+        - company != ""
+        - do_not_contact != true
+    order:
+      - company
+      - file.name
+      - role
+      - relationship_type
+      - next_contact_due
+    sort:
+      - property: company
+        direction: ASC
+      - property: file.name
+        direction: ASC
+
+  - type: table
+    name: Inbox / Needs Review
+    filters:
+      and:
+        - file.inFolder("contacts")
+        - status == "inbox"
+    order:
+      - file.name
+      - relationship_type
+      - profile_complete
+      - first_met
+      - lead_source
+    sort:
+      - property: file.name
+        direction: ASC
+
+  - type: table
+    name: Relationship Health
+    filters:
+      and:
+        - file.inFolder("contacts")
+        - status == "active"
+        - do_not_contact != true
+        - or:
+            - contact_reason == ""
+            - last_meaningful_topic == ""
+            - next_contact_due == ""
+    order:
+      - file.name
+      - status
+      - profile_complete
+      - contact_reason
+      - last_meaningful_topic
+      - next_contact_due
+    sort:
+      - property: file.name
+        direction: ASC
+
+  - type: table
+    name: Scheduled Next Steps
+    filters:
+      and:
+        - file.inFolder("contacts")
+        - status == "active"
+        - do_not_contact != true
+        - next_contact_due != ""
+    order:
+      - file.name
+      - relationship_tier
+      - contact_reason
+      - next_contact_due
+    sort:
+      - property: next_contact_due
+        direction: ASC
+
+  - type: table
     name: Archived
     filters:
       and:
+        - file.inFolder("contacts")
         - status == "archive"
     order:
       - file.name
