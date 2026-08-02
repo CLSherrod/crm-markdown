@@ -1,0 +1,22 @@
+version: 1
+profiles:
+  openai:
+    can_read_repository: true
+    can_edit_files: true
+    default_mode: review_before_write
+  claude:
+    can_read_repository: depends_on_integration
+    can_edit_files: depends_on_integration
+    default_mode: draft_only
+  gemini:
+    can_read_repository: depends_on_integration
+    can_edit_files: depends_on_integration
+    default_mode: draft_only
+  ollama:
+    can_read_repository: depends_on_runner
+    can_edit_files: depends_on_runner
+    default_mode: draft_only
+  open_webui:
+    can_read_repository: depends_on_tools
+    can_edit_files: depends_on_tools
+    default_mode: draft_only

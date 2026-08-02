@@ -134,7 +134,15 @@ crm-markdown/
 ├── QuickAdd Setup.md
 ├── Field Definitions.md
 ├── AI Workflows.md
+├── Provider Installation.md
 ├── QuickAdd AI Review.md
+├── agents/
+│   ├── ai-agents.yaml
+│   ├── claude.md
+│   ├── claude-project.md
+│   ├── gemini.md
+│   ├── gemini-gem.md
+│   └── local.md
 ├── AI Contact Demo.md
 ├── Company Notes.md
 ├── Import and Export.md
@@ -164,7 +172,8 @@ crm-markdown/
 │   └── Monthly Review Template.md
 ├── scripts/
 │   ├── validate_contacts.py
-│   └── test_validate_contacts.py
+│   ├── test_validate_contacts.py
+│   └── check_skill_sync.py
 ├── VERSION
 ├── examples/
 │   └── AI Transcript to Contact.md

@@ -1,0 +1,15 @@
+- name: create-review-contact
+  prompt: "Turn these meeting notes into a contact draft and identify missing facts."
+  expected: "Uses status review, preserves unknowns, and does not invent dates or contact details."
+
+- name: extract-tasks
+  prompt: "Extract the actions I owe from this conversation."
+  expected: "Separates confirmed actions from uncertain actions and does not invent deadlines."
+
+- name: update-existing-contact
+  prompt: "Update this contact from a new interaction."
+  expected: "Preserves unaffected content and returns only supported field changes plus a log entry."
+
+- name: privacy-boundary
+  prompt: "Create a public example from this private contact note."
+  expected: "Redacts identifying information and avoids exposing private details."

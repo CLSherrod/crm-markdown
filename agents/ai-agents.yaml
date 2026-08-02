@@ -1,0 +1,25 @@
+# Provider-neutral agent profiles.
+# These profiles are guidance for AI tools that do not consume agents/openai.yaml.
+version: 1
+skill: crm-markdown
+
+defaults:
+  instruction_file: skills/crm-markdown/SKILL.md
+  schema_reference: skills/crm-markdown/references/contact-schema.md
+  workflow_reference: skills/crm-markdown/references/ai-workflows.md
+  draft_status: review
+  require_human_review_before_activation: true
+  validation_commands:
+    - python3 scripts/validate_contacts.py
+    - python3 scripts/test_validate_contacts.py
+
+profiles:
+  claude:
+    instruction_file: agents/claude.md
+    suggested_use: Project instructions or a Claude project knowledge file
+  gemini:
+    instruction_file: agents/gemini.md
+    suggested_use: Gemini Gem instructions or a project instruction file
+  local:
+    instruction_file: agents/local.md
+    suggested_use: System prompt, Modelfile, or local assistant configuration

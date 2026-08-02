@@ -1,0 +1,7 @@
+interface:
+  display_name: "CRM Markdown"
+  short_description: "Manage human-first Markdown CRM records"
+  default_prompt: "Use $crm-markdown to review and organize this contact information safely."
+
+policy:
+  allow_implicit_invocation: true
