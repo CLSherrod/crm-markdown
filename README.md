@@ -73,6 +73,25 @@ The best networking is generous: share useful resources, make good introductions
 - **Templates for contacts, companies, communication logs, and monthly reviews**
 - **Example data you can delete or adapt**
 - **A local validation script for note properties and reminder safety**
+- **AI review queue for imported and AI-generated contacts**
+- **Relationship Health, Scheduled Next Steps, Inbox, and By Company views**
+- **AI agent profiles for Codex, Claude, Gemini, local models, Ollama, and Open WebUI**
+- **Provider installation instructions and a capability matrix**
+- **A privacy redaction utility that creates sanitized copies without overwriting originals**
+- **Weekly and monthly relationship review templates**
+- **Skill references, evaluation cases, and synchronization checks**
+
+## AI-Assisted Workflow
+
+Use AI as a careful assistant, not an autonomous sales system:
+
+1. Redact or minimize private information when possible.
+2. Ask AI to produce a proposed contact, task list, or message.
+3. Save imported or AI-generated contacts with `status: "review"`.
+4. Confirm facts, ownership, consent, and dates yourself.
+5. Change the record to `active` only after review.
+
+Start with `AI Workflows.md`, then see `Provider Installation.md` for setup with OpenAI/Codex, Claude, Gemini, Ollama, and Open WebUI.
 
 ## Privacy and Backups
 
@@ -142,10 +161,14 @@ crm-markdown/
 │   ├── claude-project.md
 │   ├── gemini.md
 │   ├── gemini-gem.md
-│   └── local.md
+│   ├── local.md
+│   ├── ollama-modelfile.txt
+│   ├── open-webui.md
+│   └── capability-matrix.yaml
 ├── AI Contact Demo.md
 ├── Company Notes.md
 ├── Import and Export.md
+├── Privacy .gitignore.example
 ├── CHANGELOG.md
 ├── Networking Dashboard.md
 ├── Follow-Up Dashboard.base
@@ -173,10 +196,18 @@ crm-markdown/
 ├── scripts/
 │   ├── validate_contacts.py
 │   ├── test_validate_contacts.py
+│   ├── test_prompt_contracts.py
+│   ├── redact_for_ai.py
 │   └── check_skill_sync.py
 ├── VERSION
 ├── examples/
 │   └── AI Transcript to Contact.md
+├── skills/
+│   └── crm-markdown/
+│       ├── SKILL.md
+│       ├── agents/
+│       ├── evals/
+│       └── references/
 ├── samples/
 │   ├── Jane Doe - Acme Inc.md
 │   ├── Marcus Lee - Collaborator.md
@@ -214,7 +245,7 @@ contacts/Evelyn Park.md
 
 Do not put real contacts in `samples/`.
 
-### Monthly Reviews
+### Reviews
 
 Put monthly relationship reviews in:
 
@@ -271,17 +302,10 @@ Delete or ignore them when you are ready to use the vault for real.
 
 ### Archive
 
-Move inactive contacts to:
-
-```text
-archive/
-```
-
-Before archiving a contact, update:
+Keep the contact note in `contacts/` so its history remains available. Before archiving a contact, update:
 
 ```yaml
 status: "archive"
-relationship_tier: "archive"
 archive_reason: ""
 ```
 
