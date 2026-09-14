@@ -2,6 +2,7 @@
 type: contact
 name: ""
 company: ""
+company_id: ""
 role: ""
 email: ""
 phone: ""
@@ -19,6 +20,7 @@ first_met: ""
 met_at: ""
 last_contacted: ""
 next_contact_due: ""
+next_action: ""
 contact_cadence: "quarterly"
 preferred_contact_method: "email"
 contact_reason: ""
@@ -38,6 +40,7 @@ archive_reason: ""
 ## Snapshot
 
 - **Company:** {{company}}
+- **Company ID:** {{company_id}}
 - **Role:** {{role}}
 - **Relationship Type:** {{relationship_type}}
 - **Relationship Tier:** {{relationship_tier}}
@@ -45,6 +48,7 @@ archive_reason: ""
 - **Contact Cadence:** {{contact_cadence}}
 - **Last Contacted:** {{last_contacted}}
 - **Next Contact Due:** {{next_contact_due}}
+- **Next Action:** {{next_action}}
 - **Reason to Contact:** {{contact_reason}}
 - **Last Meaningful Topic:** {{last_meaningful_topic}}
 
@@ -70,9 +74,9 @@ Use this format after each meaningful interaction.
 ### YYYY-MM-DD — Method
 
 - **Direction:** Outbound / Inbound
-- **Summary:** 
-- **Next step:** 
-- **Next contact due:** 
+- **Summary:**
+- **Next step:**
+- **Next contact due:**
 
 ## Open Tasks
 
