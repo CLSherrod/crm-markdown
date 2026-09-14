@@ -1,0 +1,18 @@
+version: 1
+source_of_truth: markdown
+contact:
+  required: [type, name, status, relationship_tier, last_contacted, next_contact_due, do_not_contact]
+  statuses: [inbox, review, active, inactive, archive]
+  relationship_tiers: [core, active, warm, loose, archive]
+  date_fields: [first_met, last_contacted, next_contact_due, birthday]
+  agent_fields:
+    company_id: Stable slug linking a contact to a company record.
+    next_action: Concrete action to take next, separate from the reason for contacting someone.
+company:
+  required: [type, company_id, company_name, status]
+  statuses: [active, inactive, archive]
+opportunity:
+  required: [type, opportunity_id, name, status]
+  statuses: [open, won, lost, paused]
+  optional_links: [company_id, contact_id]
+  action_fields: [next_action, next_action_due]
